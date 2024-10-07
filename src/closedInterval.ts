@@ -30,7 +30,9 @@ export class ClosedInterval {
   }
 
   public get isInsideValue() {
-    if (this._checkNum === undefined) return false;
+    if (this._checkNum === undefined) {
+      throw new Error('第3引数に値が設定されていません');
+    }
 
     return this._startNum <= this._checkNum && this._checkNum <= this._endNum
   }
