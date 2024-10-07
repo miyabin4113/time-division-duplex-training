@@ -12,6 +12,11 @@ describe('3つの整数を渡すと指定した整数を含むかどうかを判
     expect(closedInterval.isInsideValue).toBe(true);
   });
 
+  test('1, 7, 7を渡すとtrueを返す', () => {
+    const closedInterval = new ClosedInterval(1, 7, 7);
+    expect(closedInterval.isInsideValue).toBe(true);
+  });
+
   test('1, 7, 10を渡すとfalseを返す', () => {
     const closedInterval = new ClosedInterval(1, 7, 10);
     expect(closedInterval.isInsideValue).toBe(false);
