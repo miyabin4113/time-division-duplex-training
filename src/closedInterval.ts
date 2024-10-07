@@ -1,7 +1,7 @@
 export class ClosedInterval {
-  _startNum: number;
-  _endNum: number;
-  _checkNum?: number;
+  private _startNum: number;
+  private _endNum: number;
+  private _checkNum?: number;
 
   constructor (startNum: number, endNum: number, checkNum?: number) {
     if (!Number.isInteger(startNum)) {
