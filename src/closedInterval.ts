@@ -12,6 +12,10 @@ export class ClosedInterval {
       throw new Error("第2引数に整数を入れてください");
     }
 
+    if (checkNum !== undefined && !Number.isInteger(checkNum)) {
+      throw new Error('第3引数に整数を入れてください');
+    }
+
     if (startNum > endNum) {
       throw new Error('第2引数より第1引数の方が大きいため閉区間が存在しません');
     }
